@@ -6,6 +6,7 @@ Requerimiento del Sistema de Marketing
 Por necesidad de Calimod, para soportar funcionalidades no cubiertas, se prevé la gestión de canales, y gestión pre-venta y post-venta.
 
 2.	Requerimientos Funcionales
+
 a.	Registro de ventas de productos: zapatos, sandalias, zapatillas entregados a los clientes, por campaña.
 b.	Registro de información de stands de venta de clientes, asignados para Calimod.
 c.	Registro de ubicación de productos en los stands de los clientes.
