@@ -1,10 +1,12 @@
-﻿using System;
+﻿using SistemaMarketing.Mapeos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Marketing.Servicios.Mapeos;
 
 namespace SistemaMarketing
 {
@@ -16,6 +18,9 @@ namespace SistemaMarketing
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AutoMapperConfiguracion.Configuracion();
+            
+            ServiciosAutomapperConfiguracion.Configuracion();
         }
     }
 }

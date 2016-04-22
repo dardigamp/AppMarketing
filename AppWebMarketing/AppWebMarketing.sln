@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaMarketing", "Sistema
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.Repositorios", "Marketing.Repositorios\Marketing.Repositorios.csproj", "{08DE9854-AE46-4F2F-8D15-FEBA8AFFB929}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.Servicios", "Marketing.Servicios\Marketing.Servicios.csproj", "{8B1D6875-0369-4F48-924A-422D30966F30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{08DE9854-AE46-4F2F-8D15-FEBA8AFFB929}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08DE9854-AE46-4F2F-8D15-FEBA8AFFB929}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08DE9854-AE46-4F2F-8D15-FEBA8AFFB929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B1D6875-0369-4F48-924A-422D30966F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1D6875-0369-4F48-924A-422D30966F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1D6875-0369-4F48-924A-422D30966F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1D6875-0369-4F48-924A-422D30966F30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

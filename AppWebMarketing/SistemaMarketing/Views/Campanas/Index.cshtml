@@ -1,0 +1,25 @@
+﻿@model  SistemaMarketing.Models.BuscaCampanasViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="form-group col-sm-10">
+    <input type="text" placeholder="Buscar Clientes..."
+           name="Busqueda" class="form-control" value="@Model.Busqueda" />
+</div>
+<div class="col-sm-2">
+    <button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-search"></i></button>
+</div>
+
+<div id="ClientListContainer">
+    @if (Model.Campanas.Any())
+    {
+        @Html.Partial("_ListaCampanas", @Model.Campanas)
+    }
+</div>
+
+<div id="RenuevaModalFormContainer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="checkInFormLabel" aria-hidden="True"></div>
+@section Scripts {
+    @Scripts.Render("~/bundles/unobtrusive")
+}

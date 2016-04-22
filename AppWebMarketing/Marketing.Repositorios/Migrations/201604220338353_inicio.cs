@@ -3,7 +3,7 @@ namespace Marketing.Repositorios.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Inicio : DbMigration
+    public partial class inicio : DbMigration
     {
         public override void Up()
         {
@@ -16,22 +16,7 @@ namespace Marketing.Repositorios.Migrations
                         Descripcion = c.String(),
                         FechaInicio = c.DateTime(nullable: false),
                         FechaFin = c.DateTime(nullable: false),
-                        Campana_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Campanas", t => t.Campana_Id)
-                .Index(t => t.Campana_Id);
-            
-            CreateTable(
-                "dbo.Clientes",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        RazonSocial = c.String(),
-                        RUC = c.String(),
-                        Direccion = c.String(),
-                        Ubigeo = c.String(),
-                        Correo = c.String(),
+                        Estado = c.String(maxLength: 1, fixedLength: true, unicode: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -54,6 +39,19 @@ namespace Marketing.Repositorios.Migrations
                 .ForeignKey("dbo.Clientes", t => t.Cliente_Id)
                 .Index(t => t.Campana_Id)
                 .Index(t => t.Cliente_Id);
+            
+            CreateTable(
+                "dbo.Clientes",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        RazonSocial = c.String(),
+                        RUC = c.String(),
+                        Direccion = c.String(),
+                        Ubigeo = c.String(),
+                        Correo = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.DetalleVentas",
@@ -93,16 +91,14 @@ namespace Marketing.Repositorios.Migrations
             DropForeignKey("dbo.DetalleVentas", "SKU", "dbo.Productoes");
             DropForeignKey("dbo.Ventas", "Cliente_Id", "dbo.Clientes");
             DropForeignKey("dbo.Ventas", "Campana_Id", "dbo.Campanas");
-            DropForeignKey("dbo.Campanas", "Campana_Id", "dbo.Campanas");
             DropIndex("dbo.DetalleVentas", new[] { "Venta_Id" });
             DropIndex("dbo.DetalleVentas", new[] { "SKU" });
             DropIndex("dbo.Ventas", new[] { "Cliente_Id" });
             DropIndex("dbo.Ventas", new[] { "Campana_Id" });
-            DropIndex("dbo.Campanas", new[] { "Campana_Id" });
             DropTable("dbo.Productoes");
             DropTable("dbo.DetalleVentas");
-            DropTable("dbo.Ventas");
             DropTable("dbo.Clientes");
+            DropTable("dbo.Ventas");
             DropTable("dbo.Campanas");
         }
     }
