@@ -14,6 +14,7 @@ namespace Marketing.Servicios.Mapeos
         public static void Configuracion()
         {            
             Mapper.CreateMap<Campana, CampanaDto>();
+            Mapper.CreateMap<CampanaDto, Campana>();
         }
     }
 }

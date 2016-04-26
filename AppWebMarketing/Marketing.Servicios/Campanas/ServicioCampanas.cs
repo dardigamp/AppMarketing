@@ -19,11 +19,34 @@ namespace Marketing.Servicios.Campanas
             _contexto = new EFMarketingRepository();
         }
 
-        public void Nuevo(GrabaCampanaDto grabaCampanaDto)
+        //public void Nuevo(GrabaCampanaDto grabaCampanaDto)
+        //{
+        //    var campana = Mapper.Map<GrabaCampanaDto, Campana>(grabaCampanaDto);
+        //    //repositorioCliente.Agregar(cliente);
+        //    _contexto.CampanaRepository.Add(campana);
+        //    _contexto.Commit();
+        //}
+
+        public void Nuevo(CampanaDto campanaDto)
         {
-            var campana = Mapper.Map<GrabaCampanaDto, Campana>(grabaCampanaDto);
+            var campana = Mapper.Map<CampanaDto, Campana>(campanaDto);
             //repositorioCliente.Agregar(cliente);
             _contexto.CampanaRepository.Add(campana);
+            _contexto.Commit();
+        }
+
+        public CampanaDto TraerPorId(int id)
+        {
+            var campana = _contexto.CampanaRepository                
+                .SingleOrDefault(x => x.Id == id);
+            return Mapper.Map<Campana, CampanaDto>(campana);
+        }
+
+        public void Actualizar(CampanaDto campanaDto)
+        {
+            var campana = Mapper.Map<CampanaDto, Campana>(campanaDto);
+            //repositorioCliente.Agregar(cliente);
+            _contexto.CampanaRepository.Update(campana);
             _contexto.Commit();
         }
 

@@ -15,7 +15,7 @@ namespace SistemaMarketing.Mapeos
             //Mapper.CreateMap<CampanaViewModel, CampanaDto>();
             //Mapper.CreateMap<CampanaDto, CampanaViewModel >().MaxDepth(2);
             Mapper.CreateMap<CampanaDto , CampanaViewModel>();
-            
+            Mapper.CreateMap<CampanaViewModel, CampanaDto>();
 
         }
     }

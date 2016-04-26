@@ -32,6 +32,69 @@ namespace SistemaMarketing.Controllers
             //return View(db.CampanaViewModels.ToList());
         }
 
+        public ActionResult Nuevo()
+        {
+            return View(new CampanaViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult Nuevo(CampanaViewModel campana)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    // Debemos codificar la reserva
+                    CampanaDto campanaDto =
+                        Mapper.Map<CampanaViewModel, CampanaDto>(campana);
+                    servicioCampanas.Nuevo(campanaDto);                    
+                    return RedirectToAction("Index", "Campanas", new { area = "" });
+                }
+                // reconstruir el objeto anterior <ReservaViewModel>
+                ModelState.AddModelError("", "Hubo Error en el Modelo");
+                return View(campana);
+            }
+            //catch (ErrorCreandoCampana ex)
+            //{
+            //    ModelState.AddModelError("", ex.Message);
+            //    return View(campana);
+            //}
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public ActionResult Editar(int id)
+        {
+            CampanaDto campana = servicioCampanas.TraerPorId(id);
+            if (campana.EsNulo())
+                RedirectToAction("NoEncontrado", "Errores", new { area = "" });
+
+            return View(Mapper.Map<CampanaDto, CampanaViewModel>(campana));
+        }
+
+        [HttpPost]
+        public ActionResult Editar(CampanaViewModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var campana = Mapper.Map<CampanaViewModel, CampanaDto>(model);
+                    servicioCampanas.Actualizar(campana);
+                    return RedirectToAction("Index", "Campanas", new { area = "" });
+                }
+                ModelState.AddModelError("", "Hubo Error en el Modelo");
+                return View(model);
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "Hubo Error en el Modelo");
+                return View(model);
+            }
+        }
+
         //// GET: Campanas/Details/5
         //public ActionResult Details(int? id)
         //{
