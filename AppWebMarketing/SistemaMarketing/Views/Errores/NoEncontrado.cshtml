@@ -1,0 +1,22 @@
+﻿
+@model SistemaMarketing.Models.ErrorViewModel
+
+@{ 
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>No Encontrado</title>    
+    @Styles.Render("~/bundles/errores")
+</head>
+<body background="~/Content/images/fondo404.jpg">
+
+    <div class="centrado-porcentual">
+        <h1>@Model.Encabezado</h1>
+        <h3>@Model.Mensaje</h3>
+        <a href=@Url.Action("Index","Home")>@Model.IrAlHome</a>
+    </div>
+
+</body>
+</html>

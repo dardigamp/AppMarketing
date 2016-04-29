@@ -1,0 +1,15 @@
+.centrado-porcentual {
+	background-color: rgba(0, 0, 0, 0.55);
+	width:100%;
+    position: absolute;
+    text-align:right;
+	color:#FFFFFF;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+div a:link, div a:visited
+{   
+ text-decoration:none; 
+ color: #fff;  
+}
