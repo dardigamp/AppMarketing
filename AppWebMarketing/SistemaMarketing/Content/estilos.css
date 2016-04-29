@@ -1,8 +1,11 @@
 .centrado-porcentual {
-	background-color: rgba(0, 0, 0, 0.55);
+	background-color: rgba(0, 0, 0, 0.75);
 	width:100%;
     position: absolute;
     text-align:right;
+    text-shadow:5px 5px 5px #000000;
+    padding-right: 10px;    
+    padding-bottom:15px;
 	color:#FFFFFF;
     top: 50%;
     transform: translate(-50%, -50%);

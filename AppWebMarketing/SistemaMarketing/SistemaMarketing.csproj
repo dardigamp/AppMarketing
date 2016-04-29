@@ -294,6 +294,7 @@
     <Content Include="Views\Campanas\Index.cshtml" />
     <Content Include="Views\Campanas\_ListaCampanas.cshtml" />
     <Content Include="Views\Errores\NoEncontrado.cshtml" />
+    <Content Include="Views\Errores\NoAutorizado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
