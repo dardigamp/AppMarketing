@@ -51,21 +51,37 @@
   <ItemGroup>
     <Compile Include="DDD\CampanaRepositorio.cs" />
     <Compile Include="DDD\ClienteRepositorio.cs" />
+    <Compile Include="DDD\ComentarioRepositorio.cs" />
     <Compile Include="DDD\DetalleVentaRepositorio.cs" />
     <Compile Include="DDD\EFMarketingRepository.cs" />
+    <Compile Include="DDD\FotoStandRepositorio.cs" />
+    <Compile Include="DDD\FotoVisitaRepositorio.cs" />
     <Compile Include="DDD\IGenericRepository.cs" />
     <Compile Include="DDD\IMarketingRepository.cs" />
     <Compile Include="DDD\ProductoRespositorio.cs" />
+    <Compile Include="DDD\StandRepositorio.cs" />
+    <Compile Include="DDD\UbicacionRepositorio.cs" />
     <Compile Include="DDD\VentaRepositorio.cs" />
+    <Compile Include="DDD\VisitaRepositorio.cs" />
     <Compile Include="Dominio\Campana.cs" />
     <Compile Include="Dominio\Cliente.cs" />
+    <Compile Include="Dominio\Comentario.cs" />
     <Compile Include="Dominio\DetalleVenta.cs" />
     <Compile Include="Dominio\Entidad.cs" />
+    <Compile Include="Dominio\FotoStand.cs" />
+    <Compile Include="Dominio\FotoVisita.cs" />
     <Compile Include="Dominio\Producto.cs" />
+    <Compile Include="Dominio\Stand.cs" />
+    <Compile Include="Dominio\Ubicacion.cs" />
     <Compile Include="Dominio\Venta.cs" />
+    <Compile Include="Dominio\Visita.cs" />
     <Compile Include="Migrations\201604220338353_inicio.cs" />
     <Compile Include="Migrations\201604220338353_inicio.Designer.cs">
       <DependentUpon>201604220338353_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605120559281_otrastablas.cs" />
+    <Compile Include="Migrations\201605120559281_otrastablas.Designer.cs">
+      <DependentUpon>201605120559281_otrastablas.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +93,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201604220338353_inicio.resx">
       <DependentUpon>201604220338353_inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605120559281_otrastablas.resx">
+      <DependentUpon>201605120559281_otrastablas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

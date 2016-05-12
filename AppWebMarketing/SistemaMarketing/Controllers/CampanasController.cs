@@ -13,7 +13,7 @@ using AutoMapper;
 
 namespace SistemaMarketing.Controllers
 {
-    [Authorize(Roles = "Admin, Empleado")]
+    //[Authorize(Roles = "Admin, Empleado")]
     public class CampanasController : Controller
     {
         //private ApplicationDbContext db = new ApplicationDbContext();
