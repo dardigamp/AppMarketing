@@ -19,5 +19,7 @@ namespace Marketing.Repositorios.Dominio
         [StringLength(1, MinimumLength = 1)]
         public string Estado { get; set; }
         public virtual IList<Venta> Ventas { get; set; }
+
+        public virtual IList<Stand> Stands { get; set; }
     }
 }

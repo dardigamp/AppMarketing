@@ -14,5 +14,7 @@ namespace Marketing.Repositorios.Dominio
         public string Ubigeo { get; set; }
         public string Correo { get; set; }
         public virtual IList<Venta> Ventas { get; set; }
+
+        public virtual IList<Stand> Stands { get; set; }
     }
 }

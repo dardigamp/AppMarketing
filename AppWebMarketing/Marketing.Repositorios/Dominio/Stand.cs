@@ -11,6 +11,8 @@ namespace Marketing.Repositorios.Dominio
         public String Descripcion { get; set; }
         public String Tamano  { get; set; }
         public String Plano { get; set; }
+        public virtual Cliente Cliente { get; set; }
+        public virtual Campana Campana { get; set; }
         public virtual IList<FotoStand> Fotografias { get; set; }
         public virtual IList<Ubicacion> Ubicaciones { get; set; }
 

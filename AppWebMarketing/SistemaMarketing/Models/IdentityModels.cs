@@ -30,6 +30,8 @@ namespace SistemaMarketing.Models
             return new ApplicationDbContext();
         }
 
+        public System.Data.Entity.DbSet<SistemaMarketing.Models.StandViewModel> StandViewModels { get; set; }
+
         //public System.Data.Entity.DbSet<SistemaMarketing.Models.CampanaViewModel> CampanaViewModels { get; set; }
     }
 }
