@@ -218,6 +218,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BuscaCampanasViewModel.cs" />
     <Compile Include="Models\CampanaViewModel.cs" />
+    <Compile Include="Models\ClienteViewModel.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
     <Compile Include="Models\GrabaCampanaViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />

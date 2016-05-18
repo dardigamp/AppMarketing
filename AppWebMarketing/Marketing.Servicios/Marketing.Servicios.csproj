@@ -56,6 +56,8 @@
     <Compile Include="Campanas\Dtos\CampanaDto.cs" />
     <Compile Include="Campanas\Dtos\GrabaCampanaDto.cs" />
     <Compile Include="Campanas\ServicioCampanas.cs" />
+    <Compile Include="Clientes\Dtos\ClienteDto.cs" />
+    <Compile Include="Clientes\ServicioClientes.cs" />
     <Compile Include="Mapeos\ServiciosAutomapperConfiguracion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
