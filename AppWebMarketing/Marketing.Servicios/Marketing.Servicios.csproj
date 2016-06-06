@@ -55,11 +55,13 @@
   <ItemGroup>
     <Compile Include="Campanas\Dtos\CampanaDto.cs" />
     <Compile Include="Campanas\Dtos\GrabaCampanaDto.cs" />
+    <Compile Include="Stands\Dtos\StandDto.cs" />
     <Compile Include="Campanas\ServicioCampanas.cs" />
     <Compile Include="Clientes\Dtos\ClienteDto.cs" />
     <Compile Include="Clientes\ServicioClientes.cs" />
     <Compile Include="Mapeos\ServiciosAutomapperConfiguracion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stands\ServicioStands.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

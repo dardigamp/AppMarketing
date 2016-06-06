@@ -3,6 +3,8 @@ using Marketing.Servicios.Campanas;
 using Marketing.Servicios.Campanas.Dtos;
 using Marketing.Servicios.Clientes;
 using Marketing.Servicios.Clientes.Dtos;
+using Marketing.Servicios.Stands;
+using Marketing.Servicios.Stands.Dtos;
 using SistemaMarketing.Models;
 using System;
 using System.Collections.Generic;
@@ -16,10 +18,12 @@ namespace SistemaMarketing.Controllers
     {
         private ServicioCampanas servicioCampanas;
         private ServicioClientes servicioClientes;
+        private ServicioStands servicioStands;
         public StandController()
         {
             servicioCampanas = new ServicioCampanas();
             servicioClientes = new ServicioClientes();
+            servicioStands = new ServicioStands();
         }
         // GET: Stand
         public ActionResult Nuevo()
@@ -31,6 +35,27 @@ namespace SistemaMarketing.Controllers
                 Cliente = new SelectList(modelClientes, "Id", "RazonSocial")
             };
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Nuevo(StandViewModel stand)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {                    
+                    StandDto standDto =
+                        Mapper.Map<StandViewModel, StandDto>(stand);
+                    servicioStands.Nuevo(standDto);
+                    return RedirectToAction("Index", "Campanas", new { area = "" });
+                }                
+                ModelState.AddModelError("", "Hubo Error en el Modelo");
+                return View(stand);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
